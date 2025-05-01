@@ -43,7 +43,7 @@ def process_text(input_text):
 
 def call_gemini_api(input_text, verify_ssl=True):
     """Call the Gemini API to process the input text."""
-    api_key = "AIzaSyCWdj62P-i_ju2CSG1RodABlAyb7vJpjow"
+    api_key = "GEMINI_API_KEY"
     url = "https://gemini-2.0-flash.googleapis.com/v1/processText"
     headers = {"Authorization": f"Bearer {api_key}"}
     payload = {"text": input_text}
@@ -61,7 +61,7 @@ def call_gemini_api(input_text, verify_ssl=True):
 
 def call_elevenlabs_tts(text):
     """Call the ElevenLabs API to generate TTS audio with reduced lag."""
-    api_key = "sk_24abd3729f0f8bfafa8dd211b66ef9da0b157de9f9c3d5d2"
+    api_key = "ELEVENLABS_API_KEY"
     voice_id = "FGY2WhTYpPnrIDTdsKH5"
     url = f"https://api.elevenlabs.io/v1/text-to-speech/{voice_id}"
     headers = {
